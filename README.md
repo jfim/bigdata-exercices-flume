@@ -43,8 +43,7 @@ flume-ng agent -n monagent -f flumeconfig.conf
 
 1. Selon vous, est-ce que Hive supporte les clefs uniques?
 2. Considérant la réponse précédente, comment feriez vous pour importer un ensemble de données qui peut contenir des valeurs avec des clefs identiques à celles qui sont déjà dans la table?
-3. Les données du premier janvier 2014 sont disponibles ici : On_Time_On_Time_Performance_2014_1_1.tsv.bz2 
-
+3. Les données du premier janvier 2014 sont disponibles ici : https://github.com/jfim/bigdata-exercices-flume/raw/master/On_Time_On_Time_Performance_2014_1_1.tsv.bz2
 Créez une copie de vos tables de dimension, puis écrivez les requêtes nécessaires dans Hive pour charger les données du premier janvier dans une nouvelle table de faits. Pour extraire les données sur la machine Linux, vous pouvez utiliser la commande bunzip2.
 4. Créez un workflow Oozie qui permet de charger ces données. Vous pouvez passer des paramètres dans votre workflow Oozie, par exemple LOAD DATA INPATH '${INPUT}' INTO TABLE ontime; va charger les fichiers d'entrée que Oozie trouve.
 5. Créez un coordonateur Oozie qui va appeler votre workflow Oozie avec un ensemble de données récurrent.
